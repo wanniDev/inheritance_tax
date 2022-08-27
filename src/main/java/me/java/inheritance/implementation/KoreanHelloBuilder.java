@@ -21,4 +21,9 @@ public class KoreanHelloBuilder implements Buildable {
 	public void meetYou() {
 		phrase += " 그렇다고 하네요.";
 	}
+
+	@Override
+	public String getPhrase() {
+		return phrase;
+	}
 }

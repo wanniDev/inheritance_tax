@@ -1,14 +1,9 @@
 package me.java.inheritance.implementation;
 
 public class Printer implements Printable {
-	private String phrase;
-
-	public Printer(String phrase) {
-		this.phrase = phrase;
-	}
 
 	@Override
-	public void printPhrase() {
+	public void print(String phrase) {
 		System.out.println(phrase);
 	}
 }

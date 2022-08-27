@@ -24,7 +24,12 @@ public class HelloB implements Buildable, Printable {
 	}
 
 	@Override
-	public void printPhrase() {
+	public String getPhrase() {
+		return phrase;
+	}
+
+	@Override
+	public void print(String phrase) {
 		sayHello();
 		niceTo();
 		meetYou();

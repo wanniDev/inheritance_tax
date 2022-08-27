@@ -5,6 +5,9 @@ public class EnglishHelloBuilder implements Buildable {
 
 	public EnglishHelloBuilder() {
 		this.phrase = "";
+		sayHello();
+		niceTo();
+		meetYou();
 	}
 
 	@Override
@@ -20,5 +23,10 @@ public class EnglishHelloBuilder implements Buildable {
 	@Override
 	public void meetYou() {
 		phrase += " meet you.";
+	}
+
+	@Override
+	public String getPhrase() {
+		return phrase;
 	}
 }
