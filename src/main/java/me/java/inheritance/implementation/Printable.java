@@ -1,5 +1,5 @@
 package me.java.inheritance.implementation;
 
 public interface Printable {
-	void printPhrase();
+	void print(String phrase);
 }
