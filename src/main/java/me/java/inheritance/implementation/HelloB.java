@@ -8,19 +8,23 @@ public class HelloB implements Buildable, Printable {
 		this.phrase = "";
 	}
 
-	@Override
 	public void sayHello() {
 		phrase += "Hello from " + this.getClass().getSimpleName();
 	}
 
-	@Override
 	public void niceTo() {
 		phrase += " and say nice to";
 	}
 
-	@Override
 	public void meetYou() {
 		phrase += " meet you.";
+	}
+
+	@Override
+	public void build() {
+		sayHello();
+		niceTo();
+		meetYou();
 	}
 
 	@Override
@@ -30,9 +34,6 @@ public class HelloB implements Buildable, Printable {
 
 	@Override
 	public void print(String phrase) {
-		sayHello();
-		niceTo();
-		meetYou();
 		System.out.println(phrase);
 	}
 }

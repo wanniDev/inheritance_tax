@@ -8,24 +8,26 @@ public class KittyHelloBuilder implements Buildable {
 
 	public KittyHelloBuilder(String name) {
 		this.name = name;
-		sayHello();
-		niceTo();
-		meetYou();
+		build();
 	}
 
-	@Override
-	public void sayHello() {
+	private void sayHello() {
 		phrase += "안냥, \"" + name + "\" 이다냥.";
 	}
 
-	@Override
-	public void niceTo() {
+	private void niceTo() {
 		phrase += " 반갑다냥.";
 	}
 
-	@Override
-	public void meetYou() {
+	private void meetYou() {
 		phrase += " 또보자냥.";
+	}
+
+	@Override
+	public void build() {
+		sayHello();
+		niceTo();
+		meetYou();
 	}
 
 	@Override
