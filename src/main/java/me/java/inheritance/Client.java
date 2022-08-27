@@ -1,21 +1,18 @@
 package me.java.inheritance;
 
-import me.java.inheritance.abstraction.AbstractHelloA;
-import me.java.inheritance.abstraction.HelloA;
-import me.java.inheritance.implementation.HelloB;
+import me.java.inheritance.implementation.Buildable;
+import me.java.inheritance.implementation.EnglishHelloBuilder;
+import me.java.inheritance.implementation.KittyHelloBuilder;
+import me.java.inheritance.implementation.Printer;
 
 public class Client {
 	public static void main(String[] args) {
-		/**
-		 * abstract
-		 */
-		AbstractHelloA helloA = new HelloA();
-		((HelloA) helloA).buildPhraseAndPrint();
+		Buildable englishBuilder = new EnglishHelloBuilder();
+		Buildable kittyBuilder = new KittyHelloBuilder("김고양");
 
-		/**
-		 * interface
-		 */
-		HelloB helloB = new HelloB();
-		helloB.printPhrase();
+		Printer printer = new Printer();
+
+		printer.print(kittyBuilder.getPhrase());
+		printer.print(englishBuilder.getPhrase());
 	}
 }
